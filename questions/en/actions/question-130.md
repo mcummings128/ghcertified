@@ -1,6 +1,6 @@
 ---
 question: "Which of the following are true regarding workflow-level vs. job-level outputs blocks?"
-documentation: "TODO"
+documentation: "https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#example-defining-outputs-for-a-job"
 ---
 
 - [ ] Job-level `outputs` blocks should only be used in caller workflows, not reusable workflows.
