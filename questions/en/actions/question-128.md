@@ -1,5 +1,5 @@
 ---
-question: "A workflow is firing when pull requests are reopened. Why might this be the cause?"
+question: "A workflow is triggered when pull requests are reopened. Why might this be the cause?"
 documentation: "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#pull_request"
 ---
 
