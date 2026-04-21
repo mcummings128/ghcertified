@@ -27,4 +27,5 @@ outputs:
     <output-name>
         value: ${{ jobs.<job-name>.outputs.<output-name> }}
 ```
-> A workflow-level `outputs` block must followed the above structure. A `value` key is always required. An optional `description` key can also be used. See the [official documentation](https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows#using-outputs-from-a-reusable-workflow) for more details.
+> A workflow-level `outputs` block must followed the above structure. A `value` key is always required. An optional `description` key can also be used. 
+> See the documentation for more details -  https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows#using-outputs-from-a-reusable-workflow
