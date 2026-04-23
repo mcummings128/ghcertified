@@ -8,7 +8,7 @@ documentation: "https://docs.github.com/en/actions/reference/workflows-and-actio
 - [x] A workflow-level `outputs` block should only be used in reusable workflows, not caller workflows.
 > A "workflow-level" `outputs` block refers to an `outputs` block that is a direct child of `workflow_call` in reusable workflows. In non-reusable workflows, `outputs` blocks should only be present at job-level.
 - [x] A reusable workflow can have both workflow-level and job-level `outputs` blocks.
-> If setting an output in a reusable workflow and passing that output to a caller workflow is desired, both a workflow-level and a job-level `outputs` block must be used. 
+> If setting an output in a reusable workflow and passing that same output to a caller workflow is desired, both a workflow-level and a job-level `outputs` block must be used. 
 > See the documentation for more details https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows#using-outputs-from-a-reusable-workflow
 - [] A job-level `outputs` block must have the following structure:
 ```
