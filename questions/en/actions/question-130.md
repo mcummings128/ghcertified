@@ -10,7 +10,7 @@ documentation: "https://docs.github.com/en/actions/reference/workflows-and-actio
 - [x] A reusable workflow can have both workflow-level and job-level `outputs` blocks.
 > If setting an output in a reusable workflow and passing that same output to a caller workflow is desired, both a workflow-level and a job-level `outputs` block must be used. 
 > See the documentation for more details https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows#using-outputs-from-a-reusable-workflow
-- [] A job-level `outputs` block must have the following structure:
+- [ ] A job-level `outputs` block must have the following structure:
 ```
 outputs:
     <output-name>
