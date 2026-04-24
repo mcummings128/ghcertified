@@ -10,4 +10,5 @@ documentation: "TODO"
 - [ ] `name`,`runs-on: composite`,`runs.steps`
 > The `runs-on` key is for workflows, not composite actions. 
 - [ ] `name`,`runs.using: composite-action`,`runs.jobs`
-> `runs.jobs` is not a valid key for actions of any type.
+> `runs.jobs` is not a valid key for actions of any type (including composite actions).
+> Additionally, remember that composite actions are a series of reusable __steps__. Composite actions do not contain jobs. By design, these steps do not belong to their own job--instead, they are used within the context of the job that called the composite action. 
