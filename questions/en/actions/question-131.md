@@ -1,4 +1,3 @@
-
 ---
 question: "Which of the following are true regarding calling reusable workflows versus calling composite actions?"
 documentation: "https://docs.github.com/en/actions/concepts/workflows-and-actions/reusing-workflow-configurations#key-differences-between-reusable-workflows-and-composite-actions"
