@@ -4,7 +4,7 @@ documentation: "https://docs.github.com/en/actions/concepts/workflows-and-action
 ---
 
 - [x] Composite actions are called via referencing the folder that contains their `action.yml` file.
-> As an action, composite actions must contain the brunt of their logic within an `action.yml` file. The composite action's `action.yml` must reside in an `.github/actions/<action-name>` subfolder.
+> As an action, composite actions must contain the brunt of their logic within an `action.yml` file. To call the composite action, point to where its `action.yml` is located (this includes the root. ex. to call a composite action that is located in the same repository as the caller workflow, the syntax `uses: ./` would be used).
 - [ ] Reusable workflows are called via referencing the folder that contains their `action.yml` file.
 > Reusable workflows are regular `.yml` or `.yaml` files that are stored in `.github/workflows`. They do not have an `action.yml` file.
 - [ ] Composite actions must be called directly from a job.
