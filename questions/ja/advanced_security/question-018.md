@@ -1,9 +1,9 @@
 ---
-question: "GitHub が Enterprise リポジトリ内のすべての履歴コードに対してシークレットスキャンを実行するときの通知の動作は？"
+question: "GitHub が Enterprise リポジトリ内のすべての履歴コードに対して secret scanning を実施する場合、通知の動作はどうなりますか？"
 documentation: "https://docs.github.com/en/code-security/secret-scanning/managing-alerts-from-secret-scanning/monitoring-alerts#historical-scans"
 ---
 
-- [x] GitHub は、シークレットが見つからない場合でも Enterprise オーナーとセキュリティ管理者に通知します。
-- [x] リポジトリ管理者、セキュリティ管理者、および読み取り/書き込みアクセス権を持つカスタムロールのユーザーに、リポジトリ内でシークレットが検出された場合に通知します。
-- [ ] GitHub は、公開されたシークレットを検出した場合にのみ、Enterprise オーナーとセキュリティ管理者に通知します。
+- [x] GitHub は、たとえシークレットが見つからなかった場合でも、Enterprise オーナーとセキュリティ マネージャーに通知します。
+- [x] GitHub は、リポジトリ管理者、セキュリティ マネージャー、およびリード/ライトアクセス権を持つカスタムロールのユーザーに、リポジトリ内でシークレットが検出されるたびに通知します。
+- [ ] GitHub は、公開されたシークレットが検出された場合にのみ、Enterprise オーナーとセキュリティ マネージャーに通知します。
 - [ ] GitHub は、公開されたシークレットを含むコミットのコミット作者に通知します。
