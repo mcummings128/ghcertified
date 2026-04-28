@@ -10,7 +10,7 @@ documentation: "https://docs.github.com/en/actions/concepts/workflows-and-action
 - [x] Composite actions must be called as a step within a job
 > Composite actions (as with any other action) are called from within a step of a workflow job--in other words, you do not need a specific workflow job just to caller a composite action. 
 - [x] Reusable workflows must be called on workflow job level (not from step-level).
-> Steps within a workflow job cannot call a reusable workflow. A reusable workflow must be called by an indvidiual job within the caller workflow. This can result in one or more jobs running in the caller workflow (said jobs can be seen in workflow runs in the Github Actions UI). 
+> Steps within a workflow job cannot call a reusable workflow. A reusable workflow must be called by an individual job within the caller workflow. This can result in one or more jobs running in the caller workflow (said jobs can be seen in workflow runs in the Github Actions UI). 
 - [ ] Secrets can be passed to both reusable workflows and calling composite actions via the `uses.secrets` block.
 > Only reusable workflows can be called using the `secrets` block. To pass secrets to a composite action, workarounds must be used (such as passing the secret as an input)
 - [ ] Only reusable workflows can accept inputs.
