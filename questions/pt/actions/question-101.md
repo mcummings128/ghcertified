@@ -1,5 +1,5 @@
 ---
-question: "Como você garante que a etapa `Upload Failure test report` seja executada apenas se a etapa `Run Tests` falhar?"
+question: "Como garantir que a etapa `Upload Failure test report` seja executada apenas se a etapa `Run Tests` falhar?"
 documentation: "https://docs.github.com/en/actions/learn-github-actions/expressions#status-check-functions"
 ---
 
@@ -16,7 +16,7 @@ documentation: "https://docs.github.com/en/actions/learn-github-actions/expressi
     name: test-report
     path: test-reports.html
 ```
-> `failure()` substitui a verificação de status padrão `success()`, permitindo que a etapa seja executada após uma falha, e a verificação de resultado tem como alvo a etapa específica.
+> `failure()` substitui a verificação de status padrão `success()`, permitindo que a etapa seja executada após uma falha, e a verificação de resultado aponta para a etapa específica.
 
 - [ ] 
 ```yaml
@@ -60,4 +60,4 @@ documentation: "https://docs.github.com/en/actions/learn-github-actions/expressi
     name: test-report
     path: test-reports.html
 ```
-> Nenhuma condição `if` — esta etapa só é executada quando todas as etapas anteriores têm sucesso (comportamento padrão).
+> Nenhuma condição `if` — esta etapa só é executada quando todas as etapas anteriores são bem-sucedidas (comportamento padrão).
