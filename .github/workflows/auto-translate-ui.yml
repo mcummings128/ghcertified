@@ -39,7 +39,7 @@ jobs:
             targetLanguage: ${{ matrix.language.name }}
 
       - name: Translate en.json
-        uses: FidelusAleksander/prompt-action@316913653188307cbd0261878e4f8056324bc40c # v1.2.1
+        uses: FidelusAleksander/prompt-action@5fd22d9e053d49a91cc7d014eddd622bf66b43ad # v2.0.0
         id: translate
         with:
           system-prompt: ${{ steps.build-system-prompt.outputs.updated-text }}
@@ -82,6 +82,7 @@ jobs:
           gh pr create \
             --title "i18n: auto-translate UI strings" \
             --body "This PR updates UI translations for all locales based on changes to \`app/messages/en.json\` from commit ${{ github.sha }}." \
+            --label translations \
             --base main \
             --head i18n/auto-translate-ui-${{ github.sha }}
 
