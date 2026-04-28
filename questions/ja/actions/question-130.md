@@ -1,27 +1,27 @@
 ---
-question: "ワークフロー単位の`outputs`ブロックとジョブ単位の`outputs`ブロックについて、以下のうちどれが正しいですか？"
+question: "ワークフローレベルとジョブレベルの`outputs`ブロックに関して、以下のうち正しいものはどれですか？"
 documentation: "https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#example-defining-outputs-for-a-job"
 ---
 
-- [ ] ジョブ単位の`outputs`ブロックは、再利用可能なワークフローではなく、呼び出し元のワークフローでのみ使用する必要があります。
-> 再利用可能なワークフローには、ジョブ単位およびワークフロー単位の両方で`outputs`ブロックを含めることができます。
-- [x] ワークフロー単位の`outputs`ブロックは、再利用可能なワークフローでのみ使用し、呼び出し元のワークフローでは使用しないでください。
-> 「ワークフロー単位」の`outputs`ブロックとは、再利用可能なワークフロー内の`workflow_call`の直下の子要素である`outputs`ブロックを指します。再利用可能でないワークフローでは、`outputs`ブロックはジョブ単位でのみ存在する必要があります。
-- [x] 再利用可能なワークフローには、ワークフロー単位およびジョブ単位の両方で`outputs`ブロックを含むことができます。
-> 再利用可能なワークフローで出力を設定し、その同じ出力を呼び出し元のワークフローに渡す場合、ワークフロー単位およびジョブ単位の両方で`outputs`ブロックを使用する必要があります。 
-> 詳細については、こちらのドキュメントをご覧ください: https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows#using-outputs-from-a-reusable-workflow
-- [ ] ジョブ単位の`outputs`ブロックは、以下の構造である必要があります:
+- [ ] ジョブレベルの`outputs`ブロックは、呼び出し元ワークフローでのみ使用され、再利用可能なワークフローでは使用されるべきではありません。
+> 再利用可能なワークフローには、ジョブレベルとワークフローレベルの両方の`outputs`ブロックを含めることができます。
+- [x] ワークフローレベルの`outputs`ブロックは、再利用可能なワークフローでのみ使用され、呼び出し元ワークフローでは使用されるべきではありません。
+> 「ワークフローレベル」の`outputs`ブロックは、再利用可能なワークフロー内で`workflow_call`の直下にある`outputs`ブロックを指します。再利用可能でないワークフローでは、`outputs`ブロックはジョブレベルでのみ存在すべきです。
+- [x] 再利用可能なワークフローには、ワークフローレベルとジョブレベルの両方の`outputs`ブロックを含めることができます。
+> 再利用可能なワークフローで出力を設定し、その同じ出力を呼び出し元ワークフローに渡したい場合、ワークフローレベルとジョブレベルの両方の`outputs`ブロックを使用する必要があります。
+> 詳細については、ドキュメントを参照してください: https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows#using-outputs-from-a-reusable-workflow
+- [ ] ジョブレベルの`outputs`ブロックは、次のような構造を持つ必要があります:
 ```
 outputs:
     <output-name>
         value: ${{ steps.<step-name>.outputs.<output-name> }}
 ```
-> ジョブ単位の`outputs`ブロックは、`key=value`ペアのネストされていない構造を使用します。詳細については、公式ドキュメント(https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#example-defining-outputs-for-a-job)をご覧ください。
-- [x] ワークフロー単位の`outputs`ブロックは、以下の構造である必要があります:
+> ジョブレベルの`outputs`ブロックでは、`key=value`ペアの非ネスト構造が使用されます。詳細については、公式ドキュメント（https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#example-defining-outputs-for-a-job）を参照してください。
+- [x] ワークフローレベルの`outputs`ブロックは、次のような構造を持つ必要があります:
 ```
 outputs:
     <output-name>
         value: ${{ jobs.<job-name>.outputs.<output-name> }}
 ```
-> ワークフロー単位の`outputs`ブロックは、上記の構造に従う必要があります。`value`キーは常に必須です。また、オプションで`description`キーも使用できます(上記の例には示されていません)。 
-> 詳細については、こちらのドキュメントをご覧ください: https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows#using-outputs-from-a-reusable-workflow
+> ワークフローレベルの`outputs`ブロックは、上記の構造に従う必要があります。`value`キーは常に必要です。また、オプションで`description`キーを使用することもできます（上記の例には記載されていません）。  
+> 詳細については、ドキュメントを参照してください - https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows#using-outputs-from-a-reusable-workflow
