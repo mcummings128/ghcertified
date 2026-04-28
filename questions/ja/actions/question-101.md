@@ -1,5 +1,5 @@
 ---
-question: "「`Upload Failure test report`」ステップを、「`Run Tests`」ステップが失敗した場合にのみ実行するには、どうすればよいですか？"
+question: "「`Upload Failure test report` ステップを `Run Tests` ステップが失敗した場合にのみ実行するようにするにはどうすればよいですか？」"
 documentation: "https://docs.github.com/en/actions/learn-github-actions/expressions#status-check-functions"
 ---
 
@@ -16,7 +16,7 @@ documentation: "https://docs.github.com/en/actions/learn-github-actions/expressi
     name: test-report
     path: test-reports.html
 ```
-> `failure()` はデフォルトの `success()` ステータスチェックを上書きするため、このステップは失敗後にも実行でき、アウトカムチェックは特定のステップを対象とします。
+> `failure()` はデフォルトの `success()` ステータスチェックを上書きして、失敗後にステップが実行できるようにします。また、outcome チェックは特定のステップを対象としています。
 
 - [ ] 
 ```yaml
@@ -31,7 +31,7 @@ documentation: "https://docs.github.com/en/actions/learn-github-actions/expressi
     name: test-report
     path: test-reports.html
 ```
-> `always()` は機能しますが、キャンセルされた場合でもステップを実行するため、必要以上に広範囲に適用されます。
+> `always()` は機能しますが、このステップは中断時にも実行されるため、必要以上に広範な条件となっています。
 
 - [ ] 
 ```yaml
@@ -46,7 +46,7 @@ documentation: "https://docs.github.com/en/actions/learn-github-actions/expressi
     name: test-report
     path: test-reports.html
 ```
-> `failure()` のようなステータスチェック関数がないと、暗黙的に `success()` が適用されるため、このステップは失敗後にはスキップされ、アウトカムチェックは正しく機能しません。
+> `failure()` のようなステータスチェック機能を使用しない場合、暗黙的に `success()` が適用されるため、outcome チェックが正しいにもかかわらず、このステップは失敗後にスキップされます。
 
 - [ ] 
 ```yaml
@@ -60,5 +60,4 @@ documentation: "https://docs.github.com/en/actions/learn-github-actions/expressi
     name: test-report
     path: test-reports.html
 ```
-> 全く `if` 条件がない場合、このステップは前のすべてのステップが成功したときのみ実行されます（デフォルトの動作）。
-
+> `if` 条件がまったくない場合、このステップはデフォルトの動作として、すべての前のステップが成功した場合にのみ実行されます。
