@@ -4,7 +4,7 @@ documentation: "https://docs.github.com/en/actions/concepts/security/github_toke
 ---
 
 - [ ] Prawda
-- [ ] Tylko z podniesionymi uprawnieniami
+- [ ] Tylko z podwyższonymi uprawnieniami
 - [x] Fałsz
-> Uprawnienia `GITHUB_TOKEN` są ograniczone do repozytorium, które zawiera workflow, który został uruchomiony. 
-> Aby sklonować inne repozytorium, należy użyć innych metod uwierzytelnienia, takich jak personal access token (PAT) lub installation access token.
+> Uprawnienia `GITHUB_TOKEN` są ograniczone do repozytorium, które zawiera wyzwolony workflow. 
+> Aby klonować inne repozytorium, należy użyć innych metod, takich jak token dostępu osobistego (PAT) lub token dostępu instalacji.
