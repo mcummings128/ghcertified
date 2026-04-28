@@ -1,22 +1,22 @@
 ---
-question: "Su flujo de trabajo de análisis de Pull Request utiliza múltiples herramientas de análisis de código y tarda unos 20 minutos en completarse por completo. Se activa con el evento `pull_request` usando el filtro `branches` configurado en `master`. Por lo tanto, si un desarrollador empuja múltiples commits en pocos minutos, varios flujos de trabajo se ejecutan en paralelo. ¿Cómo puede detener todas las ejecuciones anteriores del flujo de trabajo y ejecutar solo la última con los cambios más recientes?"
+question: "Tu flujo de trabajo de análisis de Pull Request utiliza múltiples herramientas de análisis de código y tarda unos 20 minutos en completarse por completo. Se activa en el evento `pull_request` con el filtro `branches` configurado como `master`. Por lo tanto, si un desarrollador envía varios commits en pocos minutos, múltiples flujos de trabajo se ejecutan en paralelo. ¿Cómo puedes detener todas las ejecuciones de flujo de trabajo anteriores y ejecutar solo la que contiene los cambios más recientes?"
 documentation: "https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-using-concurrency-to-cancel-any-in-progress-job-or-run"
 ---
 
-- [x] Usar concurrencia con cancel-in-progress
+- [x] Usa concurrencia con cancel-in-progress
 ```yaml
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 ```
-- [ ] Usar concurrencia
+- [ ] Usa concurrencia
 ```yaml
 concurrency:
   group: ${{ github.ref }}
 ```
-> Esto encolaría ejecuciones en esa referencia de github. No detendrá ejecuciones anteriores.
+> Esto pondría en cola las ejecuciones en esa referencia de GitHub. No detendrá las ejecuciones anteriores.
 
-- [ ] Usar filtro de tipos de actividad
+- [ ] Usa el filtro de tipos de actividad
 ```yaml
 on:
   pull_request:
@@ -25,7 +25,8 @@ on:
     types: [latest]
 ```
 > No existe un tipo de actividad como `latest` para el evento pull_request.
-- [ ] Usar la bandera cancel-in-progress para el evento `pull_request`
+
+- [ ] Usa la bandera cancel-in-progress para el evento `pull_request`
 ```yaml
 on:
   pull_request:
