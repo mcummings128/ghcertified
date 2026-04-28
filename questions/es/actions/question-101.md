@@ -1,5 +1,5 @@
 ---
-question: "¿Cómo aseguras que el paso `Upload Failure test report` se ejecute solo si el paso `Run Tests` falla?"
+question: "¿Cómo te aseguras de que el paso `Upload Failure test report` se ejecute solo si el paso `Run Tests` falla?"
 documentation: "https://docs.github.com/en/actions/learn-github-actions/expressions#status-check-functions"
 ---
 
@@ -16,7 +16,7 @@ documentation: "https://docs.github.com/en/actions/learn-github-actions/expressi
     name: test-report
     path: test-reports.html
 ```
-> `failure()` anula la comprobación de estado predeterminada `success()` para que el paso pueda ejecutarse tras un fallo, y la comprobación del resultado se dirige al paso específico.
+> `failure()` sobrescribe la verificación de estado predeterminada `success()` para que el paso pueda ejecutarse después de un fallo, y la verificación de resultado apunta al paso específico.
 
 - [ ] 
 ```yaml
@@ -46,7 +46,7 @@ documentation: "https://docs.github.com/en/actions/learn-github-actions/expressi
     name: test-report
     path: test-reports.html
 ```
-> Sin una función de comprobación de estado como `failure()`, se aplica implícitamente `success()`, por lo que este paso se omite después de un fallo, aunque la comprobación del resultado sea correcta.
+> Sin una función de verificación de estado como `failure()`, se aplica implícitamente `success()`, por lo que este paso se omite después de un fallo, incluso si la verificación de resultado es correcta.
 
 - [ ] 
 ```yaml
