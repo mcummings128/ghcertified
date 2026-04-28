@@ -1,9 +1,9 @@
 ---
-question: "Jak można ustawić domyślną politykę raportowania podatności bezpieczeństwa dla wszystkich repozytoriów w organizacji GitHub `my-org`?"
+question: "Jak ustawić domyślną politykę zgłaszania podatności bezpieczeństwa dla wszystkich repozytoriów w organizacji `my-org` na GitHub?"
 documentation: "https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file#supported-file-types"
 ---
 
-- [x] Tworząc plik `SECURITY.md` w repozytorium `my-org/.github`
-- [ ] Konfigurując politykę raportowania podatności bezpieczeństwa w ustawieniach `Code Security and analysis` organizacji
+- [x] Poprzez utworzenie pliku `SECURITY.md` w repozytorium `my-org/.github`
+- [ ] Poprzez skonfigurowanie polityki zgłaszania podatności bezpieczeństwa w ustawieniach `Code Security and analysis` organizacji
 - [ ] Domyślne polityki bezpieczeństwa mogą być ustawiane tylko przez wsparcie GitHub
-- [ ] Tworząc plik `SECURITY.md` w każdym pojedynczym repozytorium
+- [ ] Poprzez utworzenie pliku `SECURITY.md` w każdym indywidualnym repozytorium
