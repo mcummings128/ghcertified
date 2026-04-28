@@ -4,6 +4,6 @@ documentation: "https://docs.github.com/en/communities/setting-up-your-project-f
 ---
 
 - [x] Creando un archivo `SECURITY.md` en el repositorio `my-org/.github`
-- [ ] Configurando una política de reporte de vulnerabilidades de seguridad en la configuración de `Code Security and analysis` de la organización
-- [ ] Las políticas de seguridad predeterminadas solo pueden ser configuradas por el soporte de GitHub
+- [ ] Configurando una política de reporte de vulnerabilidades de seguridad en los ajustes de `Code Security and analysis` de la organización
+- [ ] Las políticas de seguridad predeterminadas solo pueden ser establecidas por el soporte de GitHub
 - [ ] Creando un archivo `SECURITY.md` en cada repositorio individual
