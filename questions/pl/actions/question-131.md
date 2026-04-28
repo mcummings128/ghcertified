@@ -1,19 +1,19 @@
 ---
-question: "Które z poniższych stwierdzeń dotyczących wywoływania wielokrotnego użytku workflowów w porównaniu do wywoływania composite actions są prawdziwe?"
+question: "Które z poniższych stwierdzeń są prawdziwe w odniesieniu do wywoływania wielokrotnego użytku workflowów w porównaniu z wywoływaniem złożonych akcji?"
 documentation: "https://docs.github.com/en/actions/concepts/workflows-and-actions/reusing-workflow-configurations#key-differences-between-reusable-workflows-and-composite-actions"
 ---
 
-- [x] Composite actions są wywoływane przez odwołanie się do folderu zawierającego ich plik `action.yml`.
-> Composite actions muszą zawierać główną logikę w pliku `action.yml`. Aby wywołać composite action, należy wskazać lokalizację jej pliku `action.yml` (łącznie z głównym katalogiem. Np. aby wywołać composite action znajdującą się w głównym katalogu tego samego repozytorium co wywołujący workflow, należy użyć składni `uses: ./`).
-- [ ] Reusable workflows są wywoływane przez odwołanie się do folderu zawierającego ich plik `action.yml`.
-> Reusable workflows to zwykłe pliki `.yml` lub `.yaml`, które są przechowywane w katalogu `.github/workflows`. Nie mają pliku `action.yml`.
-- [x] Composite actions muszą być wywoływane jako krok w ramach zadania.
-> Composite actions (tak jak każda inna action) są wywoływane w ramach kroku w zadaniu workflow--innymi słowy, nie jest wymagane specjalne zadanie workflow wyłącznie w celu wywołania composite action.
-- [x] Reusable workflows muszą być wywoływane na poziomie zadania workflow (nie na poziomie kroku).
-> Kroki w ramach zadania workflow nie mogą wywoływać reusable workflows. Reusable workflow musi być wywoływany przez indywidualne zadanie w ramach workflow wywołującego. Może to skutkować uruchamianiem jednego lub więcej zadań w workflow wywołującym (wspomniane zadania mogą być widoczne w wynikach workflow w interfejsie GitHub Actions).
-- [ ] Sekrety mogą być przekazywane zarówno do reusable workflows, jak i do composite actions za pomocą bloku `uses.secrets`.
-> Tylko do reusable workflows można przesyłać sekrety za pomocą bloku `secrets`. Aby przekazać sekrety do composite actions, należy użyć obejść (na przykład przekazując sekret jako input).
-- [ ] Tylko reusable workflows mogą przyjmować dane wejściowe.
-> Zarówno reusable workflows, jak i composite actions mogą przyjmować dane wejściowe.
-- [x] Reusable workflows mogą używać innego typu runnera niż workflow je wywołujący, podczas gdy composite actions nie mogą.
-> Reusable workflows mają zadania, tak jak każdy inny workflow, a te zadania mogą określać różne typy runnerów za pomocą klucza `jobs.runs-on`. Composite actions dziedziczą środowisko runnera z zadania workflow je wywołującego.
+- [x] Złożone akcje są wywoływane poprzez odwołanie do folderu zawierającego plik `action.yml`.
+> Jako akcja, złożone akcje muszą zawierać główną część swojej logiki w pliku `action.yml`. Aby wywołać złożoną akcję, należy wskazać lokalizację jej pliku `action.yml` (łącznie z katalogiem głównym, np. aby wywołać złożoną akcję znajdującą się w katalogu głównym tego samego repozytorium co workflow wywołujący, należy użyć składni `uses: ./`).
+- [ ] Wielokrotnego użytku workflowy są wywoływane poprzez odwołanie do folderu zawierającego ich plik `action.yml`.
+> Wielokrotnego użytku workflowy to zwykłe pliki `.yml` lub `.yaml`, które są przechowywane w katalogu `.github/workflows`. Nie posiadają pliku `action.yml`.
+- [x] Złożone akcje muszą być wywoływane jako krok w ramach zadania.
+> Złożone akcje (podobnie jak inne akcje) są wywoływane w kroku zadania workflowa — innymi słowy, nie potrzebujesz osobnego zadania workflowa tylko do wywołania złożonej akcji.
+- [x] Wielokrotnego użytku workflowy muszą być wywoływane na poziomie zadania workflowa (nie z poziomu kroku).
+> Kroki w ramach zadania workflowa nie mogą wywoływać workflowa wielokrotnego użytku. Workflow wielokrotnego użytku musi być wywoływany przez poszczególne zadanie w obrębie workflowa wywołującego. Może to powodować uruchamianie jednego lub więcej zadań w ramach workflowa wywołującego (zadania te można zobaczyć w widoku uruchomień workflowów w interfejsie użytkownika GitHub Actions).
+- [ ] Sekrety mogą być przekazywane zarówno do wielokrotnego użytku workflowów, jak i złożonych akcji za pomocą bloku `uses.secrets`.
+> Tylko workflowy wielokrotnego użytku mogą być wywoływane z użyciem bloku `secrets`. Aby przekazać sekrety do złożonej akcji, należy użyć obejść (takich jak przekazanie sekretu jako wejścia).
+- [ ] Tylko workflowy wielokrotnego użytku mogą akceptować dane wejściowe.
+> Zarówno workflowy wielokrotnego użytku, jak i złożone akcje mogą akceptować dane wejściowe.
+- [x] Workflowy wielokrotnego użytku mogą używać innego typu agenta niż workflow wywołujący, podczas gdy złożone akcje nie mogą.
+> Workflowy wielokrotnego użytku mają zadania jak każdy inny workflow, a te zadania mogą określać inny typ agenta za pomocą klucza `jobs.runs-on`. Złożone akcje dziedziczą środowisko agenta z workflowa wywołującego.
