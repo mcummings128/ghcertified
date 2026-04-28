@@ -8,4 +8,3 @@ documentation: "https://docs.github.com/en/copilot/customizing-copilot/adding-or
 - [x] Copilot Business y Copilot Enterprise
 > Las instrucciones personalizadas de organización se configuran en la configuración de la organización y requieren un plan Copilot Business o Enterprise. Las instrucciones personalizadas a nivel de repositorio están disponibles en todos los planes.
 - [ ] Solo Copilot Enterprise
-
