@@ -1,5 +1,5 @@
 ---
-question: "Jak zapewnić, że krok `Upload Failure test report` zostanie wykonany tylko wtedy, gdy krok `Run Tests` zakończy się niepowodzeniem?"
+question: "Jak zapewnić, aby krok `Upload Failure test report` był wykonywany tylko wtedy, gdy krok `Run Tests` zakończy się niepowodzeniem?"
 documentation: "https://docs.github.com/en/actions/learn-github-actions/expressions#status-check-functions"
 ---
 
@@ -16,7 +16,7 @@ documentation: "https://docs.github.com/en/actions/learn-github-actions/expressi
     name: test-report
     path: test-reports.html
 ```
-> `failure()` nadpisuje domyślną funkcję sprawdzania statusu `success()`, dzięki czemu krok może zostać wykonany po niepowodzeniu, a warunek sprawdzający wynik odnosi się do konkretnego kroku.
+> `failure()` zastępuje domyślną kontrolę statusu `success()`, dzięki czemu krok może być wykonany po niepowodzeniu, a warunek `outcome` odnosi się do konkretnego kroku.
 
 - [ ] 
 ```yaml
@@ -31,7 +31,7 @@ documentation: "https://docs.github.com/en/actions/learn-github-actions/expressi
     name: test-report
     path: test-reports.html
 ```
-> `always()` działa, ale powoduje wykonanie kroku nawet w przypadku anulowania, co jest szerszym podejściem niż wymagane.
+> `always()` działa, ale powoduje wykonanie kroku nawet w przypadku anulowania, co jest szerszym zakresem niż wymagane.
 
 - [ ] 
 ```yaml
@@ -46,7 +46,7 @@ documentation: "https://docs.github.com/en/actions/learn-github-actions/expressi
     name: test-report
     path: test-reports.html
 ```
-> Bez funkcji sprawdzania statusu, takiej jak `failure()`, domyślnie stosowana jest funkcja `success()`, więc ten krok jest pomijany po wystąpieniu niepowodzenia, nawet jeśli warunek wyniku jest poprawny.
+> Bez funkcji sprawdzania statusu, takiej jak `failure()`, domyślnie stosowana jest funkcja `success()`, więc ten krok jest pomijany po niepowodzeniu, nawet jeśli warunek `outcome` jest poprawny.
 
 - [ ] 
 ```yaml
