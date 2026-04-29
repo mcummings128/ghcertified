@@ -1,6 +1,6 @@
 ---
 question: "Which of the following are true regarding Github Enterprise Server (GHES)?"
-documentation: "https://docs.github.com/en/enterprise-server@3.14/admin/overview/about-github-enterprise-server"
+documentation: "https://docs.github.com/en/enterprise-server/admin/overview/about-github-enterprise-server"
 ---
 
 - [x] GHES workflows cannot access Github.com nor Github Marketplace actions by default. 
