@@ -1,10 +1,10 @@
 ---
 question: "How do you use Github Script in workflows?"
-documentation: "https://docs.github.com/en/actions/reference/security/secure-use#using-third-party-actions"
+documentation: "https://github.com/marketplace/actions/github-script"
 ---
 
 - [x] Via the `actions/github-script` action
-> To use Github Script, you must call upon [`actions/github-script`] (https://github.com/actions/github-script) 
+> To use Github Script, you must call upon [`actions/github-script`](https://github.com/actions/github-script) 
 - [ ] By enabling its configuration in the Actions settings of a repository
 > There are no settings relating to Github Script in the Actions settings of a repository.
 - [ ] By enabling its configuration in the Actions settings of an organization
