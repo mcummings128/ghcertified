@@ -4,11 +4,11 @@ documentation: "https://docs.github.com/en/actions/how-tos/write-workflows/choos
 ---
 
 - [x] Forked repositories do not inherit secrets from the original repository  
-> As a security measure, (except for GITHUB_TOKEN) secrets are not passed to the runner when a workflow is triggered from a forked repository. This will result in the workflow failing if it references a secret from the original repository.
+> As a security measure, (except for `GITHUB_TOKEN`) secrets are not passed to the runner when a workflow is triggered from a forked repository. This will result in the workflow failing if it references a secret from the original repository.
 - [ ] When inheriting the secret from the original repository, there was an error during the fork that resulted in a malformed, invalid secret
-> Except for GITHUB_TOKEN, secrets are not passed to the runner when a workflow is triggered from a forked repository. Thus, no such malformation could occur.
+> Except for `GITHUB_TOKEN`, secrets are not passed to the runner when a workflow is triggered from a forked repository. Thus, no such malformation could occur.
 - [ ] The inherited secret had a size larger than 48 KB
-> Except for GITHUB_TOKEN, secrets are not passed to the runner when a workflow is triggered from a forked repository. Thus, size is not a factor to consider.
+> Except for `GITHUB_TOKEN`, secrets are not passed to the runner when a workflow is triggered from a forked repository. Thus, size is not a factor to consider.
 - [ ] Forked repositories only inherit repository secrets, so the secret being used in the workflow must have been an organizational or environment secret.
-> Except for GITHUB_TOKEN, secrets are not passed to the runner when a workflow is triggered from a forked repository. This applies to all types of secrets (repository, environment, and organizational).
+> Except for `GITHUB_TOKEN`, secrets are not passed to the runner when a workflow is triggered from a forked repository. This applies to all types of secrets (repository, environment, and organizational).
 
