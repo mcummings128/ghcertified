@@ -12,7 +12,7 @@ jobs:
         os: [ubuntu-latest, windows-latest]
 ```
 
-- [x] Set `jobs.<job_id>.strategy.fail-fast` to `false`!!!!!
+- [x] Set `jobs.<job_id>.strategy.fail-fast` to `false`
 > `jobs.<job_id>.strategy.fail-fast` is set to `true` by default, meaning if one matrix job fails, other in-progress and queued matrix jobs will be cancelled. You must explicitly set `fail-fast` to `false` to avoid this behavior. 
 - [ ] Nothing needs to be done, since `jobs.<job_id>.strategy.fail-fast` has a default setting of `false`
 > `jobs.<job_id>.strategy.fail-fast` is set to `true` by default.
