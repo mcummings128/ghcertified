@@ -8,6 +8,15 @@ jobs:
   deploy:
     strategy:
       matrix:
-        version: ["1", "1.2", "1.3"]
         os: [ubuntu-latest, windows-latest]
+        version: [1, 2, 3]
+        include:
+            - comment-color: "green"
+            - error-color: "red"
 ```
+
+- [x] 6
+> When individual keys are added under `include`
+- [ ] 8
+- [ ]
+- [ ]
