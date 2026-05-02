@@ -21,11 +21,11 @@ jobs:
 
 - [x] 5
 > This matrix produces 5 jobs with the following matrix combinations:
-> * `os:ubuntu-latest,version:1,comment-color:blue,error-color:red` 
-> * `os:ubuntu-latest,version:2,comment-color:blue,error-color:red` 
-> * `os:windows-latest,version:1,comment-color:green,error-color:red` 
-> * `os:windows-latest,version:2,comment-color:green,error-color:red` 
-> * `os:macos-latest,comment-color:yellow` 
+* `os:ubuntu-latest,version:1,comment-color:blue,error-color:red` 
+* `os:ubuntu-latest,version:2,comment-color:blue,error-color:red` 
+* `os:windows-latest,version:1,comment-color:green,error-color:red` 
+* `os:windows-latest,version:2,comment-color:green,error-color:red` 
+* `os:macos-latest,comment-color:yellow` 
 
 > For jobs that use `os:ubuntu-latest`, the `comment-color` will be `"blue"` because `comment-color` is not part of the original matrix configuration, so it can be overwritten by other mentions of itself. 
 > All jobs originating from combinations of the original will use `error-color:red` because `error-color` does not overwrite any combinations in the original matrix, and will thus get added to each said configuration. It is only defined once, meaning it will always be `"red"` 
