@@ -21,7 +21,6 @@ jobs:
 
 - [x] 5
 > This matrix produces 5 jobs with the following matrix combinations:
-
 `os:ubuntu-latest,version:1,comment-color:blue,error-color:red`
 `os:ubuntu-latest,version:2,comment-color:blue,error-color:red`
 `os:windows-latest,version:1,comment-color:green,error-color:red`
