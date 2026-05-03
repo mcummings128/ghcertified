@@ -8,6 +8,7 @@ documentation: "https://docs.github.com/en/actions/reference/workflows-and-actio
 - [ ] `workflow_trigger`
 > There is no such event trigger
 - [ ] `workflow_dispatch`
-> `workflow_dispatch` is used for manually triggering a workflow. See [the documentation] for more info.(https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#workflow_dispatch) is
+> `workflow_dispatch` is used for manually triggering a workflow. See [the documentation](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#workflow_dispatch) for more info.
 - [ ] `workflow_call`
-> `workflow_call` is used so a workflow can be called from other workflows or actions. See [the documentation] for more info.(https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#workflow_call) 
+> `workflow_call` is used so a workflow can be called from other workflows or actions. See [the documentation](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#workflow_call) 
+ for more info.
