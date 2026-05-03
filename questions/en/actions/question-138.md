@@ -4,7 +4,7 @@ documentation: "https://docs.github.com/en/actions/reference/workflows-and-actio
 ---
 
 - [x] `workflow_run`
-> `workflow_run` allows you to specify what other workflows (once completed, regardless of success) should trigger your workflow. Note that while this question specifically asks about completed workflows, `workflow_run` can also be oriented to trigger your workflow when other specified workflows have been triggered or started processing on a runner
+> `workflow_run` allows you to trigger a workflow once other specified workflows have completed (regardless of success). Note that while this question specifically asks about completed workflows, `workflow_run` can also be oriented to trigger a workflow when other specified workflows have been triggered or started processing on a runner
 - [ ] `workflow_trigger`
 > There is no such event trigger
 - [ ] `workflow_dispatch`
