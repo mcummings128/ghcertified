@@ -1,5 +1,5 @@
 ---
-question: "Quantos trabalhos serão executados na seguinte matriz?"
+question: "Quantos jobs serão executados na seguinte matriz?"
 documentation: "https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/run-job-variations#expanding-or-adding-matrix-configurations"
 ---
 
@@ -20,7 +20,7 @@ jobs:
 ```
 
 - [x] 5
-> Esta matriz produz 5 trabalhos com as seguintes combinações na matriz:
+> Esta matriz produz 5 jobs com as seguintes combinações de matriz:
 
 > `os:ubuntu-latest,version:1,comment-color:blue,error-color:red` 
 
@@ -32,7 +32,7 @@ jobs:
 
 > `os:macos-latest,comment-color:yellow` 
 
-> Uma chave `include` NÃO definida em `strategy.matrix` pode ser adicionada a uma configuração de trabalho desde que não sobrescreva a configuração. Chaves `include` já presentes em `strategy.matrix` criarão um novo trabalho se tiverem um novo valor. 
+> Uma chave `include` NÃO definida em `strategy.matrix` pode ser adicionada a uma configuração de job desde que não sobrescreva a configuração. Chaves `include` já presentes em `strategy.matrix` irão criar um novo job, se tiverem um novo valor. 
 
 - [ ] 6
 - [ ] 7
