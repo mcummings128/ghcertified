@@ -32,7 +32,7 @@ jobs:
 
 > `os:macos-latest,comment-color:yellow` 
 
-> Klucz `include` NIE zdefiniowany w `strategy.matrix` może być dodany do konfiguracji zadania, jeżeli nie nadpisuje konfiguracji. Klucze `include` obecne już w `strategy.matrix` utworzą nowe zadanie, jeśli będą miały nową wartość. 
+> Klucz `include` NIE zdefiniowany w `strategy.matrix` może zostać dodany do konfiguracji zadania, jeśli nie nadpisuje konfiguracji. Klucze `include` już obecne w `strategy.matrix` utworzą nowe zadanie, jeśli mają nową wartość.
 
 - [ ] 6
 - [ ] 7
