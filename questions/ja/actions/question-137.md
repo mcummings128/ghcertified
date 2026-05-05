@@ -1,5 +1,5 @@
 ---
-question: "以下のマトリックスでは、いくつのジョブが実行されますか？"
+question: "以下のマトリックスで実行されるジョブは何個ですか？"
 documentation: "https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/run-job-variations#expanding-or-adding-matrix-configurations"
 ---
 
@@ -20,7 +20,7 @@ jobs:
 ```
 
 - [x] 5
-> このマトリックスでは、以下のマトリックスの組み合わせにより5つのジョブが作成されます:
+> このマトリックスは以下の組み合わせで5つのジョブを生成します:
 
 > `os:ubuntu-latest,version:1,comment-color:blue,error-color:red` 
 
@@ -32,7 +32,7 @@ jobs:
 
 > `os:macos-latest,comment-color:yellow` 
 
-> `strategy.matrix` で定義されていない `include` キーは、既存の構成を上書きしない限りジョブ構成に追加できます。 `strategy.matrix` にすでに存在する `include` キーは、新しい値を持つ場合、新しいジョブを生成します。
+> `strategy.matrix` で定義されていない `include` キーは、設定を上書きしない場合にジョブ設定に追加することができます。`strategy.matrix` ですでに存在する `include` キーは、新しい値がある場合に新しいジョブを作成します。
 
 - [ ] 6
 - [ ] 7
