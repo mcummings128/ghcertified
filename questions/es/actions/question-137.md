@@ -32,7 +32,7 @@ jobs:
 
 > `os:macos-latest,comment-color:yellow` 
 
-> Una clave `include` NO definida en `strategy.matrix` puede añadirse a la configuración de un trabajo siempre que no sobrescriba la configuración. Las claves `include` ya presentes en `strategy.matrix` crearán un nuevo trabajo si tienen un nuevo valor. 
+> Una clave `include` NO definida en `strategy.matrix` se puede agregar a una configuración de trabajo si no sobrescribe la configuración. Las claves `include` ya presentes en `strategy.matrix` crearán un nuevo trabajo si tienen un nuevo valor. 
 
 - [ ] 6
 - [ ] 7
