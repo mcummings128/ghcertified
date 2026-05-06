@@ -1,13 +1,13 @@
 ---
-question: "W jaki sposób można włączyć diagnostyczne logowanie runnera?"
+question: "W jaki sposób można włączyć logowanie diagnostyczne biegacza?"
 documentation: "https://docs.github.com/en/actions/how-tos/monitor-workflows/enable-debug-logging#enabling-runner-diagnostic-logging"
 ---
 
-- [x] Ustawiając sekret lub zmienną o nazwie `ACTIONS_RUNNER_DEBUG` na `true`
+- [x] Ustawienie sekretu lub zmiennej o nazwie `ACTIONS_RUNNER_DEBUG` na `true`
 > Uwaga: `ACTIONS_RUNNER_DEBUG` można ustawić jako sekret lub zmienną na poziomie organizacji lub repozytorium.
-- [x] Ponownie uruchamiając workflow z włączonym `Enable debug logging`
-- [ ] Dodając folder najwyższego poziomu `ACTIONS_RUNNER_DEBUG` do repozytorium workflow
-- [ ] Dodając podfolder `runner-diagnostic-logs` do katalogu `_diag` używanego runnera hostowanego we własnym zakresie
-> `runner-diagnostic-logs` to nazwa folderu generowanego przez GitHub, gdy włączony jest `ACTIONS_RUNNER_DEBUG`. Aby uniknąć potencjalnych nieporozumień, folder o tej nazwie nie powinien być tworzony w żadnym innym miejscu.
-- [ ] Zmieniając nazwę katalogu `_diag` hostowanego we własnym zakresie runnera na `runner-diagnostic-logs`
-> Zmiana nazwy katalogu `_diag` nigdy nie powinna być wykonywana, ponieważ może to potencjalnie wpłynąć na działania związane z logowaniem.
+- [x] Ponowne uruchomienie przepływu pracy z włączonym `Enable debug logging`
+- [ ] Poprzez dodanie folderu najwyższego poziomu `ACTIONS_RUNNER_DEBUG` do repozytorium przepływu pracy
+- [ ] Poprzez dodanie podfolderu `runner-diagnostic-logs` do katalogu `_diag` używanego biegacza hostowanego samodzielnie
+> `runner-diagnostic-logs` to nazwa folderu, który generuje GitHub, gdy `ACTIONS_RUNNER_DEBUG` jest włączona. Aby uniknąć potencjalnych nieporozumień, folder o tej nazwie nie powinien być tworzony w innym miejscu. 
+- [ ] Zmiana nazwy katalogu `_diag` biegacza hostowanego samodzielnie na `runner-diagnostic-logs`
+> Zmienianie nazwy katalogu `_diag` nigdy nie powinno być wykonywane, ponieważ może to potencjalnie wpłynąć na działania logowania.
