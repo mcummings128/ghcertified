@@ -1,29 +1,29 @@
 ---
-question: "再利用可能なワークフローを作成しており、その入力として `branch-name` を使用しています。このワークフロー内で、ブランチ名が 'smoke-test' で始まる場合にステップを条件付きで実行するにはどうすればよいですか？"
+question: "再利用可能なワークフローを作成しており、`branch-name`を入力として使用しています。このワークフロー内で、ブランチ名が'smoke-test'で始まる場合に、ステップを条件付きで実行するにはどうすればよいですか？"
 documentation: "https://docs.github.com/en/actions/reference/workflows-and-actions/expressions#startswith"
 ---
 
-- [x] 組み込みの `startsWith` メソッドを `jobs.<job_id>.steps[*].if` と組み合わせて使用する
+- [x] 組み込みメソッド`startsWith`を`jobs.<job_id>.steps[*].if`と組み合わせて使用する
 ```yaml
     if: startsWith(inputs.branch-name, 'smoke-test')
 ```
 
-- [ ] 組み込みの `startsWith` メソッドを `jobs.<job_id>.steps[*].if` と組み合わせて使用する
+- [ ] 組み込みメソッド`startsWith`を`jobs.<job_id>.steps[*].if`と組み合わせて使用する
 ```yaml
     if: inputs.branch-name.startsWith('smoke-test')
 ``` 
-> GitHub Actions の組み込みメソッドではメソッドチェーンを使用することはできません。ほとんどすべての組み込みメソッドは `methodName(arg1,arg2,...)` の形式で記述されます。
-- [ ] `workflow_call` の下で `branches` フィルタを使用する
+> GitHub Actionsの組み込みメソッドではメソッドチェーンを使用できません。ほとんどすべての組み込みメソッドは`methodName(arg1,arg2,...)`の形式で記述されます。
+- [ ] `workflow_call`の`branches`フィルタを使用する
 ```yaml
 on:
   workflow_call:
     branches:
         - 'smoke-test/**'
 ```
-> `workflow_call` イベントトリガーには `branches` フィルタは使用できません。さらに、ワークフローイベントトリガーを使用してステップの実行を制御することはできません。
+> `branches`フィルタは`workflow_call`イベントトリガーでは使用できません。さらに、ワークフローイベントトリガーはステップの実行制御には使用できません。
 
-- [ ] `jobs.<job_id>.steps[*].if` と組み合わせてシェル条件を使用する
+- [ ] シェル条件式を`jobs.<job_id>.steps[*].if`と組み合わせて使用する
 ```yaml
     if: [[ "${{inputs.branch-name}}" == "smoke-test"* ]]
 ```
-> `jobs.<job_id>.steps[*].if` 条件式では、サポートされている GitHub Actions コンテキストと式しか使用できません。
+> `jobs.<job_id>.steps[*].if`条件式では、GitHub Actionsでサポートされているコンテキストと式のみが使用できます。
