@@ -8,6 +8,6 @@ documentation: "https://docs.github.com/en/copilot/reference/custom-agents-confi
 - [ ] `tools`
 > `tools` lista quais ferramentas o agente pode usar, mas não define configurações de servidores MCP.
 - [ ] `servers`
-> Não existe uma chave `servers` no esquema YAML de perfil de agente personalizado.
+> Não existe chave `servers` no esquema YAML do agente personalizado.
 - [ ] `extensions`
 > `extensions` não é uma chave válida no frontmatter do perfil de agente personalizado.
