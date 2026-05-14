@@ -1,13 +1,13 @@
 ---
-question: "Która komenda GitHub CLI inicjuje nową sesję Copilot cloud agent, aby autonomicznie pracować nad zadaniem?"
+question: "Które polecenie GitHub CLI rozpoczyna nową sesję agenta chmurowego Copilot do autonomicznej pracy nad zadaniem?"
 documentation: "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/create-a-pr"
 ---
 
 - [x] `gh agent-task create`
-> `gh agent-task create` (wymaga GitHub CLI w wersji 2.80.0+) inicjuje sesję cloud agent, która może tworzyć branche i pull requesty.
+> `gh agent-task create` (wymaga GitHub CLI v2.80.0+) rozpoczyna sesję agenta chmurowego, który może tworzyć branche i pull requests.
 - [ ] `gh copilot agent start`
-> Ta komenda nie istnieje w GitHub CLI.
+> To polecenie nie istnieje w GitHub CLI.
 - [ ] `gh workflow run copilot-agent`
-> To uruchomiłoby workflow GitHub Actions, a nie sesję Copilot cloud agent.
+> To polecenie uruchomiłoby workflow GitHub Actions, a nie sesję agenta chmurowego Copilot.
 - [ ] `gh issue assign --copilot`
-> Chociaż możesz przypisywać issues do Copilot za pomocą API, to nie jest właściwa składnia komendy CLI.
+> Można przypisać zadania Copilot przez API, ale to nie jest poprawna składnia polecenia CLI.
