@@ -1,5 +1,5 @@
 ---
-question: "GitHub CLI のどのコマンドが新しい Copilot クラウドエージェントセッションを開始し、タスクを自律的に処理しますか？"
+question: "GitHub CLI のどのコマンドが、新しい Copilot クラウドエージェントセッションを開始し、自律的にタスクに取り組むことができますか？"
 documentation: "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/create-a-pr"
 ---
 
@@ -8,6 +8,6 @@ documentation: "https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cl
 - [ ] `gh copilot agent start`
 > このコマンドは GitHub CLI には存在しません。
 - [ ] `gh workflow run copilot-agent`
-> これは GitHub Actions のワークフローを実行するものであり、Copilot クラウドエージェントセッションではありません。
+> これは GitHub Actions ワークフローを実行するものであり、Copilot クラウドエージェントセッションを開始するものではありません。
 - [ ] `gh issue assign --copilot`
-> API を介して Copilot に Issue を割り当てることはできますが、これは正しい CLI コマンド構文ではありません。
+> API を使用して Copilot に Issue を割り当てることはできますが、これは正しい CLI コマンドの構文ではありません。
