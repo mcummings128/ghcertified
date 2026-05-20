@@ -5,7 +5,7 @@ documentation: "https://docs.github.com/en/actions/reference/workflows-and-actio
 
 - [x] `push`
 - [x] `pull_request`
-> `pull_request` を介してワークフローをトリガーするには、ワークフローを含むブランチがプルリクエストのターゲットブランチである必要があります。
+> ワークフローを`pull_request`でトリガーするには、ワークフローを含むブランチがプルリクエストのターゲットブランチである必要があります。
 - [ ] `repository_dispatch`
 - [ ] `star`
 - [ ] `issues`
