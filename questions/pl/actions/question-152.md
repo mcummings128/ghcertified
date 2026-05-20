@@ -1,12 +1,12 @@
 ---
-question: "Uzupełnij zdanie: Podczas korzystania z runnerów hostowanych samodzielnie, pamięć podręczna narzędzi ___"
+question: "Uzupełnij puste miejsce: Podczas korzystania z samodzielnie hostowanych runnerów, pamięć podręczna narzędzi ___"
 documentation: "https://docs.github.com/en/enterprise-server/admin/managing-github-actions-for-your-enterprise/managing-access-to-actions-from-githubcom/setting-up-the-tool-cache-on-self-hosted-runners-without-internet-access"
 ---
 
-- [x] zaczyna się jako pusta i musi zostać wypełniona, aby zapisywać narzędzia między uruchomieniami
-> Pamięci podręczne narzędzi pozwalają na przechowywanie różnych wersji narzędzi, co umożliwia szybsze działanie runnerów hostowanych samodzielnie. Bez pamięci podręcznych runnery hostowane samodzielnie korzystające z `actions/setup-*` będą działały wolniej.
-- [ ] zaczyna się tak samo jak w runnerach hostowanych przez GitHub, gdzie jest wstępnie wypełniona określonymi narzędziami
-> Chociaż runnery hostowane przez GitHub są dostarczane z wstępnie zainstalowanymi narzędziami, nie dotyczy to runnerów hostowanych samodzielnie.
-- [ ] zaczyna się z takimi samymi narzędziami jak runnery hostowane przez GitHub oraz wybranym zestawem niestandardowych narzędzi do usprawnienia zarządzania runnerami hostowanymi samodzielnie
+- [x] początkowo jest pusta i musi zostać wypełniona, aby zapisać narzędzia między uruchomieniami
+> Pamięci podręczne narzędzi umożliwiają buforowanie różnych wersji narzędzi, co przyspiesza działanie samodzielnie hostowanego runnera. Bez pamięci podręcznych runnery, które używają `actions/setup-*`, będą działać wolniej.
+- [ ] początkowo jest taka sama jak w runnerach hostowanych przez GitHub, to znaczy jest wstępnie wypełniona określonymi narzędziami
+> Chociaż runnery hostowane przez GitHub zawierają pewne wstępnie zainstalowane narzędzia, w przypadku runnerów samodzielnie hostowanych jest inaczej.
+- [ ] zaczyna z tymi samymi narzędziami co runnery hostowane przez GitHub, a także z wybranym zestawem niestandardowych narzędzi, aby ulepszyć zarządzanie runnerami samodzielnie hostowanymi
 - [ ] nie może być wypełniona
 
