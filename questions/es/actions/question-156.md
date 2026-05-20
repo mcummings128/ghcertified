@@ -1,5 +1,5 @@
 ---
-question: "¿De qué maneras puedes eliminar artefactos de los workflows?"
+question: "¿De qué maneras puedes eliminar artefactos de workflows?"
 documentation: "https://docs.github.com/en/actions/how-tos/manage-workflow-runs/remove-workflow-artifacts"
 ---
 
@@ -9,7 +9,7 @@ documentation: "https://docs.github.com/en/actions/how-tos/manage-workflow-runs/
 - [x] Usando un endpoint específico de la API de GitHub
 > La API de GitHub tiene un endpoint "Delete an artifact". Consulta la [documentación](https://docs.github.com/en/rest/actions/artifacts?apiVersion=2026-03-10#delete-an-artifact) para más detalles.
 - [ ] Usando la acción `actions/delete-artifact` en un workflow 
-- [ ] Accediendo de forma remota a los self-hosted runners a través de SSH, navegando al directorio `.github/artifacts` y eliminando los artefactos seleccionados
-> Generalmente, los artefactos se almacenan utilizando la infraestructura de GitHub, no los runners. 
+- [ ] Accediendo remotamente a runners auto-hospedados mediante SSH, navegando al directorio `.github/artifacts` y eliminando los artefactos seleccionados
+> Los artefactos generalmente se almacenan utilizando la infraestructura de GitHub, no los runners.
 - [ ] Configurando el período de retención de los artefactos a 0 días
-> Los períodos de retención de artefactos no pueden configurarse en 0 días. Consulta la [documentación](https://docs.github.com/en/organizations/managing-organization-settings/configuring-the-retention-period-for-github-actions-artifacts-and-logs-in-your-organization) para más información.
+> Los períodos de retención de artefactos no pueden configurarse a 0 días. Consulta la [documentación](https://docs.github.com/en/organizations/managing-organization-settings/configuring-the-retention-period-for-github-actions-artifacts-and-logs-in-your-organization) para más información.
