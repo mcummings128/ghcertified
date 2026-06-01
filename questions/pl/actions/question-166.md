@@ -1,13 +1,13 @@
 ---
-question: "Działania JavaScript i `actions/github-script` oba korzystają z JavaScript. Dlaczego powinieneś używać `actions/github-script` zamiast tworzyć własne działanie w JavaScript?"
+question: "Działania JavaScript i `actions/github-script` oba używają JavaScript. Dlaczego powinieneś używać `actions/github-script` zamiast tworzyć własne działanie w JavaScript?"
 documentation: "https://github.com/actions/github-script"
 ---
 
-- [x] `actions/github-script` powinien być używany do krótkich skryptów inline
-- [x] `actions/github-script` powinien być używany, gdy chcesz użyć wstępnie uwierzytelnionego klienta do interakcji z GitHub API.
-- [x] Działania JavaScript powinny być używane, gdy chcesz stworzyć niestandardowe, wielokrotnego użytku działanie do użycia w różnych repozytoriach
-- [ ] Działania JavaScript powinny być używane do krótkich skryptów inline
-- [ ] `actions/github-script` powinien być używany, gdy musisz użyć precyzyjnie dostosowanego środowiska Node.js z kilkoma specyficznymi zależnościami
-> Chociaż możesz zainstalować moduły dla `actions/github-script` do użycia przed jego wywołaniem, to jeśli kilka zależności jest potrzebnych, skutkuje to kilkoma krokami w ramach workflow. `actions/github-script` również nie pozwala na zmianę wersji Node.js; jesteś ograniczony do tej, którą definiuje.
-- [ ] Działania JavaScript powinny być używane, gdy chcesz lekkie rozwiązanie do wykonywania wywołań GitHub API.
-> Działania JavaScript nie są lekkie; wymagają utworzenia pliku `action.yml`, który musi być przechowywany w osobnym folderze lub nawet oddzielnym repozytorium, w zależności od podejścia. `actions/github-script` posiada wstępnie uwierzytelnionego klienta, co ułatwia wykonywanie wywołań GitHub API przy użyciu podejścia opartego na JavaScript.
+- [x] `actions/github-script` powinien być używany do krótkich skryptów w linii.
+- [x] `actions/github-script` powinien być używany, gdy chcesz korzystać z wstępnie uwierzytelnionego klienta do interakcji z GitHub API.
+- [x] Działania JavaScript powinny być używane, gdy chcesz utworzyć niestandardowe działanie wielokrotnego użytku do użycia w różnych repozytoriach.
+- [ ] Działania JavaScript powinny być używane do krótkich skryptów w linii.
+- [ ] `actions/github-script` powinien być używany, gdy potrzebujesz precyzyjnie dostrojonego środowiska Node.js z kilkoma specyficznymi zależnościami.
+> Chociaż możesz instalować moduły do użycia z `actions/github-script` przed jego wywołaniem, jeśli potrzebne są liczne zależności, prowadzi to do zwiększenia liczby kroków w workflow. `actions/github-script` również nie pozwala na zmianę wersji Node.js; jesteś związany tą, którą określa.
+- [ ] Działania JavaScript powinny być używane, gdy chcesz niskonakładowego rozwiązania do wykonywania wywołań GitHub API.
+> Działania JavaScript nie są niskonakładowe; wymagają stworzenia pliku `action.yml`, który z kolei musi być przechowywany w osobnym folderze, a nawet w osobnym repozytorium, w zależności od podejścia. `actions/github-script` zawiera wstępnie uwierzytelnionego klienta, co umożliwia łatwe wykonywanie wywołań GitHub API za pomocą podejścia opartego na JavaScript.
