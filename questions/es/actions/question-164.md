@@ -6,6 +6,6 @@ documentation: "https://docs.github.com/en/actions/reference/workflows-and-actio
 - [x] Nivel de job
 - [x] Nivel de step
 - [ ] Nivel de workflow
-> `if:` no está disponible a nivel de workflow. Para activar condicionalmente un workflow completo, se deben usar otros métodos, como especificar tipos de actividad.
-- [ ] Nivel de environment
-- [ ] Nivel de organization
+> `if:` no está presente a nivel de workflow. Para activar condicionalmente un workflow completo, se deben usar otros métodos como especificar tipos de actividad.
+- [ ] Nivel de entorno
+- [ ] Nivel de organización
