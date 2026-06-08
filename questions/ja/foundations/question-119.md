@@ -1,5 +1,5 @@
 ---
-question: "ユーザーが組織が所有するリポジトリに直接コミットをプッシュするために必要な最低リポジトリロールは何ですか?"  
+question: "ユーザーが組織が所有するリポジトリに直接コミットをプッシュするために必要な最低限のリポジトリロールは何ですか？"  
 draft: false  
 documentation: "https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization"
 ---
@@ -8,4 +8,4 @@ documentation: "https://docs.github.com/en/organizations/managing-user-access-to
 - [ ] Triage  
 - [x] Write  
 - [ ] Maintain  
-- [ ] Admin
+- [ ] Admin  
