@@ -1,11 +1,11 @@
 ---
-question: "Manuela は、IP アドレスとの通信が厳しく制限された組織向けにセルフホストランナーを設定しています。セルフホストランナーが GitHub と通信できるようにするにはどうすればよいですか？"
+question: "Manuelaは、IPアドレスとの通信が厳しく制限されている組織のためにセルフホストランナーを設定しています。セルフホストランナーがGitHubと通信できるようにするには、どうすればよいでしょうか？"
 documentation: "https://docs.github.com/en/enterprise-cloud@latest/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/managing-allowed-ip-addresses-for-your-organization#using-github-actions-with-an-ip-allow-list"
 ---
 
-- [x] セルフホストランナーの IP アドレスを組織の IP 許可リストに追加する  
-> セルフホストランナーは、[ドキュメント](https://docs.github.com/en/enterprise-cloud@latest/actions/reference/runners/self-hosted-runners#communication)にあるように、さまざまな活動を行うために GitHub と通信します。この通信を許可するには、セルフホストランナーの IP アドレスを IP 許可リストに追加する必要があります。
-- [ ] セルフホストランナーのオペレーティングシステムを組織のオペレーティングシステム許可リストに追加する  
-- [ ] `.ip-exception` ファイルをセルフホストランナーのディレクトリ構造のトップレベルに追加する  
-- [ ] GitHub ホストの標準ランナーに切り替える。IP 許可リストが有効になっている場合、セルフホストランナーはブロックされるため  
-- [ ] 組織の IP 許可リスト設定で「Allow access from self-hosted runners」チェックボックスを選択する  
+- [x] 組織のIP許可リストにセルフホストランナーのIPアドレスを追加する
+> セルフホストランナーはさまざまな活動を行うためにGitHubと通信します。これを許可するには、[ドキュメント](https://docs.github.com/en/enterprise-cloud@latest/actions/reference/runners/self-hosted-runners#communication)に記載されているように、セルフホストランナーのIPアドレスをIP許可リストに追加する必要があります。
+- [ ] 組織のオペレーティングシステム許可リストにセルフホストランナーのオペレーティングシステムを追加する
+- [ ] `.ip-exception`ファイルをセルフホストランナーのディレクトリ構造のトップレベルに追加する
+- [ ] GitHubホストの標準ランナーに切り替える（IP許可リストが有効になっている場合、セルフホストランナーはブロックされるため）
+- [ ] 組織のIP許可リスト設定で「セルフホストランナーからのアクセスを許可する」チェックボックスを選択する
