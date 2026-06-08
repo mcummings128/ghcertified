@@ -1,5 +1,5 @@
 ---
-question: "Observe los valores en la clave `runs-on` como se muestra en el siguiente trabajo del workflow. ¿Qué es cierto con respecto a cómo se ejecutará el trabajo?"
+question: "Observe los valores en la clave `runs-on` como se muestra en el trabajo del flujo de trabajo a continuación. ¿Qué es cierto con respecto a cómo se ejecutará el trabajo?"
 documentation: "https://docs.github.com/en/actions/how-tos/manage-runners/self-hosted-runners/use-in-a-workflow#using-custom-labels-to-route-jobs"
 ---
 ```yaml
@@ -10,9 +10,9 @@ jobs:
 ```
 
 - [x] El trabajo se ejecutará en un runner self-hosted que tenga todas las etiquetas aplicadas.
-- [ ] El trabajo se ejecutará en un runner self-hosted que tenga cualquiera de las etiquetas aplicadas.
-> Las etiquetas del runner se aplican de forma acumulativa; un workflow no se ejecutará en un runner que solo tenga algunas de las etiquetas. Todas son necesarias.
-- [ ] El trabajo aún podrá ejecutarse en runners hosteados por GitHub, ya que pueden tener etiquetas personalizadas aplicadas a ellos.
-> Los runners hosteados por GitHub no pueden tener etiquetas personalizadas aplicadas. Deben referenciarse con las [etiquetas predefinidas](https://docs.github.com/en/enterprise-cloud@latest/actions/how-tos/write-workflows/choose-where-workflows-run/choose-the-runner-for-a-job#standard-github-hosted-runners-for-public-repositories) que se les han asignado.
-- [ ] El trabajo se ejecutará en un runner (self-hosted o hosteado por GitHub, el primero disponible) con el nombre `self-hosted,nes,linux`.
-> `runs-on` apunta a etiquetas de runners, no a nombres.
+- [ ] El trabajo se ejecutará en un runner self-hosted que tenga cualquiera de las etiquetas aplicadas.  
+> Las etiquetas de los runners se aplican de forma acumulativa; un flujo de trabajo no se ejecutará en un runner que solo tenga algunas de las etiquetas. Se necesitan todas las etiquetas.  
+- [ ] El trabajo aún podrá ejecutarse en runners alojados por GitHub, ya que estos pueden tener etiquetas personalizadas aplicadas a ellos.  
+> Los runners alojados por GitHub no pueden tener etiquetas personalizadas aplicadas. Deben ser referenciados utilizando las [etiquetas predefinidas](https://docs.github.com/en/enterprise-cloud@latest/actions/how-tos/write-workflows/choose-where-workflows-run/choose-the-runner-for-a-job#standard-github-hosted-runners-for-public-repositories) que se les han asignado.  
+- [ ] El trabajo se ejecutará en un runner (self-hosted o alojado por GitHub, el primero que esté disponible) con el nombre `self-hosted,nes,linux`.  
+> `runs-on` señala etiquetas de runners, no nombres.  
