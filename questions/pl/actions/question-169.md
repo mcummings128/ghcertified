@@ -1,11 +1,11 @@
 ---
-question: "Manuela konfiguruje własne hostowane biegacze (self-hosted runners) dla swojej organizacji, która ma silnie ograniczoną komunikację z adresami IP. Jak może zapewnić, że własne hostowane biegacze będą mogły komunikować się z GitHub?"
+question: "Manuela konfiguruje runnersy hostowane samodzielnie dla swojej organizacji, która ma mocno ograniczoną komunikację z adresami IP. Jak może zapewnić, że runnersy hostowane samodzielnie będą mogły komunikować się z GitHubem?"
 documentation: "https://docs.github.com/en/enterprise-cloud@latest/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/managing-allowed-ip-addresses-for-your-organization#using-github-actions-with-an-ip-allow-list"
 ---
 
-- [x] Dodanie adresów IP własnych hostowanych biegaczy do listy dozwolonych adresów IP organizacji
-> Własne hostowane biegacze komunikują się z GitHub w celu wykonywania różnych działań, co zostało opisane w [dokumentacji](https://docs.github.com/en/enterprise-cloud@latest/actions/reference/runners/self-hosted-runners#communication). Aby umożliwić tę komunikację, należy dodać adresy IP własnych hostowanych biegaczy do listy dozwolonych adresów IP.
-- [ ] Dodanie systemu operacyjnego własnych hostowanych biegaczy do listy dozwolonych systemów operacyjnych organizacji
-- [ ] Dodanie pliku `.ip-exception` do katalogu głównego struktury katalogowej własnego hostowanego biegacza
-- [ ] Przełączenie się na standardowe biegacze hostowane przez GitHub, ponieważ własne hostowane biegacze będą zablokowane, jeśli listy dozwolonych adresów IP są włączone
-- [ ] Zaznaczenie pola wyboru "Zezwalaj na dostęp z własnych hostowanych biegaczy" w ustawieniach listy dozwolonych adresów IP organizacji
+- [x] Dodanie adresu(-ów) IP runnersów hostowanych samodzielnie do listy dozwolonych adresów IP organizacji
+> Runnersy hostowane samodzielnie komunikują się z GitHubem w celu wykonania różnych działań, jak pokazano w [dokumentacji](https://docs.github.com/en/enterprise-cloud@latest/actions/reference/runners/self-hosted-runners#communication). Aby umożliwić tę komunikację, należy dodać adres(-y) IP runnersa hostowanego samodzielnie do listy dozwolonych adresów IP
+- [ ] Dodanie systemu operacyjnego runnersów hostowanych samodzielnie do listy dozwolonych systemów operacyjnych organizacji
+- [ ] Dodanie pliku `.ip-exception` do najważniejszego poziomu struktury katalogów runnersa hostowanego samodzielnie
+- [ ] Przejście na standardowe runnersy hostowane przez GitHub, ponieważ runnersy hostowane samodzielnie będą blokowane, jeśli włączone są listy dozwolonych adresów IP
+- [ ] Wybranie pola wyboru „Allow access from self-hosted runners” w ustawieniach listy dozwolonych adresów IP organizacji
