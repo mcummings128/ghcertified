@@ -1,5 +1,5 @@
 ---
-question: "Catherine pisze poniższy job w workflow. Jaki będzie wynik wykonania tego jobu?"
+question: "Catherine pisze poniższy kod dla zadania workflow. Jaki będzie wynik działania tego zadania?"
 documentation: "https://github.com/actions/checkout"
 ---
 
@@ -22,10 +22,10 @@ jobs:
         run: python ./scripts/scaffold-doc.py
 ```
 
-- [x] Skrypt Python nie zostanie uruchomiony, ponieważ `actions/checkout` nie zostało uwzględnione w workflow.
-> `actions/checkout` jest konieczne do pobrania kodu repozytorium na system plików runnera. Jeśli nie zostanie użyte, skrypt Python nie zostanie znaleziony i tym samym nie zostanie wykonany.
-- [ ] Skrypt Python zostanie pomyślnie uruchomiony, ponieważ polecenie `chmod` nadaje skryptowi uprawnienia do wykonania.
-> To byłoby prawdą, gdyby użyto `actions/checkout`.
+- [x] Skrypt Python nie zostanie uruchomiony, ponieważ `actions/checkout` nie jest uwzględnione w workflow.
+> `actions/checkout` jest niezbędne do pobrania kodu repozytorium do systemu plików runnera. Jeśli nie zostanie użyte, skrypt Python nie zostanie znaleziony i w efekcie nie zostanie uruchomiony.
+- [ ] Skrypt Python zostanie uruchomiony pomyślnie, ponieważ polecenie `chmod` nadaje uprawnienia do wykonywania skryptu.
+> To byłoby prawdą, gdyby `actions/checkout` zostało użyte.
 - [ ] Skrypt Python nie zostanie uruchomiony, ponieważ `runs-on` nie ma wartości `python`.
-- [ ] Skrypt Python nie zostanie uruchomiony, ponieważ `actions/python-setup` nie jest poprawną akcją do ustawienia środowiska Python.
-> Większość oficjalnych akcji konfigurujących języki programowania używa struktury `actions/setup-<language>`.
+- [ ] Skrypt Python nie zostanie uruchomiony, ponieważ `actions/python-setup` nie jest właściwą akcją do konfiguracji Pythona.
+> Większość oficjalnych akcji, które konfigurują języki programowania, korzysta ze struktury `actions/setup-<language>`. 
