@@ -1,5 +1,5 @@
 ---
-question: "Catherine escreve o seguinte trabalho de workflow abaixo. Qual será o resultado do trabalho?"
+question: "Catherine escreve o fluxo de trabalho do trabalho abaixo. Qual será o resultado do trabalho?"
 documentation: "https://github.com/actions/checkout"
 ---
 
@@ -22,10 +22,10 @@ jobs:
         run: python ./scripts/scaffold-doc.py
 ```
 
-- [x] O script Python não será executado, porque `actions/checkout` não está incluído no workflow.
-> `actions/checkout` é necessário para fazer o checkout do código do repositório no sistema de arquivos do runner. Se não for usado, o script Python não será encontrado e, portanto, não será executado.
-- [ ] O script Python será executado com sucesso, porque o comando `chmod` concede permissão de execução ao script.
-> Isso seria verdade se `actions/checkout` fosse usado.
-- [ ] O script Python não será executado, porque `runs-on` não tem um valor de `python`.
-- [ ] O script Python não será executado, porque `actions/python-setup` não é a ação correta para configurar o Python.
-> A maioria das ações oficiais que configuram linguagens de programação usa a estrutura `actions/setup-<language>`. 
+- [x] O script Python não irá executar, porque o `actions/checkout` não está incluído no fluxo de trabalho.
+> `actions/checkout` é necessário para fazer o checkout do código do repositório no sistema de arquivos do runner. Sem ele, o script Python não será encontrado e, portanto, não será executado.
+- [ ] O script Python será executado com sucesso, porque o comando `chmod` concede permissões de execução ao script.
+> Isso seria verdade se o `actions/checkout` tivesse sido usado.
+- [ ] O script Python não irá executar, porque `runs-on` não tem um valor de `python`.
+- [ ] O script Python não irá executar, porque `actions/python-setup` não é a ação correta para configurar o Python.
+> A maioria das ações oficiais que configuram linguagens de programação usam a estrutura `actions/setup-<language>`.
