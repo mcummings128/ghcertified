@@ -1,5 +1,5 @@
 ---
-question: "Catherineは以下のワークフロージョブを作成しました。このジョブの結果はどうなりますか？"
+question: "キャサリンは以下のワークフロージョブを作成しました。このジョブの結果はどうなりますか？"
 documentation: "https://github.com/actions/checkout"
 ---
 
@@ -22,10 +22,10 @@ jobs:
         run: python ./scripts/scaffold-doc.py
 ```
 
-- [x] Pythonスクリプトは実行されません。`actions/checkout`がワークフローに含まれていないためです。
-> `actions/checkout`はリポジトリのコードをランナーのファイルシステムにチェックアウトするために必要です。これが使用されていない場合、Pythonスクリプトが見つからず、実行されません。
-- [ ] `chmod`コマンドがスクリプトに実行権限を付与するため、Pythonスクリプトは正常に実行されます。
-> これは`actions/checkout`が使用されている場合に当てはまります。
-- [ ] Pythonスクリプトは実行されません。`runs-on`に`python`の値が設定されていないためです。
-- [ ] Pythonスクリプトは実行されません。`actions/python-setup`はPythonをセットアップするための正しいアクションではありません。
-> プログラミング言語をセットアップするための公式アクションの多くは、`actions/setup-<language>`という構造を使用します。
+- [x] Pythonスクリプトは実行されません。なぜなら、`actions/checkout` がワークフローに含まれていないからです。
+> `actions/checkout` はリポジトリのコードをランナーのファイルシステムにチェックアウトするために必要です。これが使用されていない場合、Pythonスクリプトが見つからず、実行されません。
+- [ ] Pythonスクリプトは正常に実行されます。なぜなら、`chmod` コマンドによってスクリプトの実行権限が付与されるからです。
+> これは `actions/checkout` が使用されている場合に当てはまります。
+- [ ] Pythonスクリプトは実行されません。なぜなら、`runs-on` に `python` の値が設定されていないからです。
+- [ ] Pythonスクリプトは実行されません。なぜなら、`actions/python-setup` はPythonをセットアップする適切なアクションではないからです。
+> ほとんどの公式アクションでは、プログラミング言語をセットアップするために `actions/setup-<language>` という構造を使用します。
