@@ -4,7 +4,7 @@ documentation: "https://docs.github.com/en/actions/how-tos/reuse-automations/reu
 ---
 
 ```yaml
-# workflow chamador
+# workflow de chamado
 on:
     issues:
         types: [opened]
@@ -33,11 +33,11 @@ on:
                 - run: gh issue create --title "Issue report" --body "Hello!" --repo $GITHUB_REPOSITORY
 
 ```
-- [x] O workflow reutilizável retornará um erro, pois o job que o chamou possui apenas permissões de `contents:read`
-> Nesse cenário, o workflow chamador é acionado, mas seu job não será executado. Em vez disso, será gerado um erro dizendo que o arquivo de workflow chamador não é válido, pois o workflow reutilizável está solicitando permissões `contents: write`, mas tem apenas permissões `contents: read`.
-- [ ] O workflow reutilizável criará um issue no repositório com o título `"Issue Report"`
-> Isso ocorreria se o job `issue_creator` tivesse permissões de `contents:write`, que seriam herdadas pelo workflow reutilizável.
+- [x] O workflow reutilizável retornará um erro, já que o job que o chamou tem apenas permissões de `contents:read`
+> Nesse cenário, o workflow de chamada é acionado, mas seu job não será executado. Em vez disso, será gerado um erro indicando que o arquivo do workflow de chamada não é válido, pois o workflow reutilizável está solicitando `contents:write`, mas apenas `contents:read` está autorizado.
+- [ ] O workflow reutilizável criará uma issue no repositório intitulada `"Issue Report"`
+> Isso aconteceria se o job `issue_creator` tivesse permissões de `contents:write`, que seriam herdadas pelo workflow reutilizável.
 - [ ] O workflow reutilizável não será chamado, pois workflows reutilizáveis devem estar em uma subpasta de `.github/workflows`
 > Todos os workflows devem estar localizados no diretório `.github/workflows`.
-- [ ] Tanto o workflow chamador quanto o workflow reutilizável não serão chamados, porque `issues` não é um gatilho válido para GitHub Actions.
-> `issues` é um evento padrão de gatilho, conforme visto na [documentação](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#issues)
+- [ ] Tanto o workflow de chamada quanto o reutilizável não serão acionados, pois `issues` não é um gatilho disponível para o GitHub Actions.
+> `issues` é um evento padrão, conforme visto na [documentação](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#issues).
