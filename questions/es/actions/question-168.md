@@ -1,5 +1,5 @@
 ---
-question: "¿Qué claves son necesarias al crear un archivo `action.yml`?"
+question: "¿Qué claves se requieren al crear un archivo `action.yml`?"
 documentation: "https://docs.github.com/en/actions/reference/workflows-and-actions/metadata-syntax"
 ---
 
