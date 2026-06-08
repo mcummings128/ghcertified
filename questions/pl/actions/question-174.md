@@ -1,5 +1,5 @@
 ---
-question: "Poniższy przepływ pracy wywołuje wielokrotnego użytku przepływ pracy w jednej ze swoich prac. Wielokrotnego użytku przepływ pracy ma zdefiniowane `permissions` na poziomie przepływu pracy, jak widać poniżej. Jaki będzie rezultat wywołania wielokrotnego użytku przepływu pracy?"
+question: "Poniższy przepływ pracy wywołuje wielokrotnego użytku przepływ pracy w jednym ze swoich zadań. Wielokrotnego użytku przepływ pracy ma zdefiniowane `permissions` na poziomie przepływu, jak pokazano poniżej. Jaki będzie wynik wywołania przepływu pracy wielokrotnego użytku?"
 documentation: "https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows"
 ---
 
@@ -33,11 +33,11 @@ on:
                 - run: gh issue create --title "Issue report" --body "Hello!" --repo $GITHUB_REPOSITORY
 
 ```
-- [x] Wielokrotnego użytku przepływ pracy zwróci błąd, ponieważ praca, która go wywołuje, ma tylko uprawnienia `contents:read`
-> W tym scenariuszu przepływ pracy wywołujący zostanie uruchomiony, ale jego praca nie zostanie wykonana. Zamiast tego wygenerowany zostanie błąd informujący, że plik przepływu pracy wywołującego jest nieważny, ponieważ przepływ pracy wielokrotnego użytku żąda `contents:write`, ale ma tylko przyznane `contents:read`.
+- [x] Wielokrotnego użytku przepływ pracy zwróci błąd, ponieważ zadanie, które go wywołało, ma tylko uprawnienia `contents: read`
+> W tym scenariuszu wywołujący przepływ pracy zostanie uruchomiony, ale jego zadanie nie zostanie wykonane. Zamiast tego wygenerowany zostanie błąd, który informuje, że plik wywołującego przepływu pracy jest nieprawidłowy, ponieważ przepływ pracy wielokrotnego użytku wymaga `contents: write`, podczas gdy jest tylko dozwolone `contents: read`.
 - [ ] Wielokrotnego użytku przepływ pracy utworzy zgłoszenie w repozytorium zatytułowane `"Issue Report"`
-> Tak by się stało, gdyby praca `issue_creator` miała uprawnienia `contents:write`, które mogłyby zostać odziedziczone przez przepływ pracy wielokrotnego użytku.
-- [ ] Wielokrotnego użytku przepływ pracy nie zostanie wywołany, ponieważ przepływy pracy wielokrotnego użytku muszą znajdować się w podkatalogu `.github/workflows`
+> To wystąpiłoby, gdyby zadanie `issue_creator` miało uprawnienia `contents:write`, które odziedziczyłby wielokrotnego użytku przepływ pracy.
+- [ ] Wielokrotnego użytku przepływ pracy nie zostanie wywołany, ponieważ przepływy pracy wielokrotnego użytku muszą znajdować się w podfolderze `.github/workflows`
 > Wszystkie przepływy pracy muszą być zlokalizowane w katalogu `.github/workflows`.
-- [ ] Ani wywołujący, ani wielokrotnego użytku przepływ pracy nie zostaną wywołane, ponieważ `issues` nie jest dostępnych zdarzeniem wyzwalającym dla GitHub Actions. 
-> `issues` jest standardowym zdarzeniem wyzwalającym, co można zobaczyć w [dokumentacji](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#issues).
+- [ ] Wywołujący i wielokrotnego użytku przepływ pracy nie zostaną wywołane, ponieważ `issues` nie jest dostępny jako wyzwalacz dla GitHub Actions. 
+> `issues` jest standardowym zdarzeniem wyzwalającym, co pokazano w [dokumentacji](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#issues)
