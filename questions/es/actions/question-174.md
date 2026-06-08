@@ -1,10 +1,10 @@
 ---
-question: "El siguiente flujo de trabajo llama a flujos de trabajo reutilizables en uno de sus trabajos. El flujo de trabajo reutilizable tiene definidas `permissions` a nivel de flujo de trabajo, como se muestra a continuación. ¿Cuál será el resultado de llamar al flujo de trabajo reutilizable?"
+question: "El siguiente workflow llama a un workflow reutilizable en uno de sus trabajos. El workflow reutilizable tiene los `permissions` definidos a nivel de workflow como se ve a continuación. ¿Cuál será el resultado de llamar al workflow reutilizable?"
 documentation: "https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows"
 ---
 
 ```yaml
-# flujo de trabajo que llama
+# workflow llamante
 on:
     issues:
         types: [opened]
@@ -18,7 +18,7 @@ on:
                 contents: read
             uses: ./.github/workflows/issue-creator.yml
 
-# flujo de trabajo reutilizable (issue-creator.yml)
+# workflow reutilizable (issue-creator.yml)
 on:
     workflow_call:
 
@@ -33,11 +33,11 @@ on:
                 - run: gh issue create --title "Issue report" --body "Hello!" --repo $GITHUB_REPOSITORY
 
 ```
-- [x] El flujo de trabajo reutilizable devolverá un error, ya que el trabajo que lo llamó solo tiene permisos de `contents:read`
-> En este escenario, se activa el flujo de trabajo que llama, pero su trabajo no se ejecutará. En cambio, se generará un error indicando que el archivo del flujo de trabajo que llama no es válido, ya que el flujo de trabajo reutilizable solicita `contents: write`, pero solo se le permite `contents: read`.
-- [ ] El flujo de trabajo reutilizable creará un problema en el repositorio titulado `"Issue Report"`
-> Esto ocurriría si el trabajo `issue_creator` tuviera permisos de `contents:write`, que serían heredados por el flujo de trabajo reutilizable.
-- [ ] El flujo de trabajo reutilizable no será llamado, ya que los flujos de trabajo reutilizables deben estar en una subcarpeta de `.github/workflows`
-> Todos los flujos de trabajo deben estar ubicados en el directorio `.github/workflows`.
-- [ ] Tanto el flujo de trabajo que llama como el flujo de trabajo reutilizable no serán llamados, porque `issues` no es un disparador disponible para GitHub Actions. 
-> `issues` es un evento disparador estándar, como se indica en la [documentación](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#issues)
+- [x] El workflow reutilizable devolverá un error, ya que el trabajo que lo llamó solo tiene permisos `contents:read`
+> En este escenario, el workflow llamante se activa, pero su trabajo no se ejecutará. En su lugar, se generará un error que indica que el archivo del workflow llamante no es válido ya que el workflow reutilizable está solicitando `contents: write`, pero solo tiene permitido `contents: read`.
+- [ ] El workflow reutilizable creará un issue en el repositorio titulado `"Issue Report"`
+> Esto ocurriría si el trabajo `issue_creator` tuviera permisos `contents:write`, que serían heredados por el workflow reutilizable.
+- [ ] El workflow reutilizable no será llamado, ya que los workflows reutilizables deben estar en una subcarpeta de `.github/workflows`
+> Todos los workflows deben estar ubicados en el directorio `.github/workflows`.
+- [ ] Tanto el workflow llamante como el reutilizable no serán llamados, porque `issues` no es un disparador válido para GitHub Actions. 
+> `issues` es un disparador de evento estándar, como se menciona en la [documentación](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#issues).
