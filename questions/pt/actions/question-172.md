@@ -3,8 +3,8 @@ question: "A organização de Ingrid possui um subconjunto de runners Linux auto
 documentation: "https://docs.github.com/en/actions/how-tos/manage-runners/self-hosted-runners/manage-access#changing-which-repositories-can-access-a-runner-group"
 ---
 
-- [x] Criar um novo grupo de runners, adicionar os runners ao grupo e então selecionar quais repositórios terão acesso ao grupo nas configurações do grupo.
-- [ ] Criar um novo rótulo de runner, adicionar os rótulos aos runners e então selecionar quais repositórios terão acesso ao rótulo nas configurações do rótulo.
-- [ ] Criar um novo rótulo de runner, adicionar os rótulos aos runners e garantir que todos os workflows nos repositórios tenham esse rótulo incluído no campo `runs-on`.
-> Rótulos não limitam o acesso a runners. Apenas adicionar um rótulo não funcionará; adicionar rótulos ao `runs-on` pode potencialmente afetar o workflow correspondente ao tentar encontrar um runner para executar.
-- [ ] Criar um novo grupo de runners, selecionar "Linux" como o sistema operacional e usar padrões glob para definir quais repositórios terão acesso nas configurações do grupo.
+- [x] Crie um novo grupo de runners, adicione os runners ao grupo e selecione quais repositórios têm acesso permitido ao grupo nas configurações do grupo.
+- [ ] Crie um novo label de runner, adicione os labels aos runners e selecione quais repositórios têm acesso permitido ao label nas configurações do label.
+- [ ] Crie um novo label de runner, adicione os labels aos runners e certifique-se de que todos os workflows nos repositórios incluam esse label no campo `runs-on` de seus arquivos.
+> Labels não limitam o acesso aos runners. Apenas adicionar um label não funcionará; adicionar labels ao `runs-on` pode potencialmente afetar o fluxo de trabalho correspondente, impedindo que encontre um runner para executar.
+- [ ] Crie um novo grupo de runners, selecione "Linux" como o sistema operacional e use padrões glob para definir quais repositórios têm acesso permitido nas configurações do grupo.  
