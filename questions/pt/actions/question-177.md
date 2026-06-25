@@ -1,5 +1,5 @@
 ---
-question: "Seu fluxo de trabalho deve iniciar às 00:00 AM toda segunda e sexta-feira. Qual dos trechos a seguir corresponde a esse comportamento?"
+question: "Seu fluxo de trabalho deve iniciar às 12:00 AM toda segunda e sexta-feira. Qual dos snippets a seguir corresponde a esse comportamento?"
 documentation: "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule"
 ---
 
@@ -17,7 +17,7 @@ on:
   schedule:
     - cron: '0 12 * * Mon,Fri'
 ```
-> O item "dia(s) da semana" deve estar no formato numérico. Além disso, os itens "minuto" e "hora" apontam para 12:00 PM, não 00:00 AM.
+> O item "dia(s) da semana" deve estar em formato numérico. Além disso, os itens "minuto" e "hora" apontam para 12:00 PM, não 12:00 AM.
 
 - [ ] 
 ```yaml
