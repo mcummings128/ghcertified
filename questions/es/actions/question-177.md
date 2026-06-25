@@ -9,7 +9,7 @@ on:
   schedule:
     - cron: '0 0 * * 1,5'
 ```
-> La sintaxis de `cron` tiene sus elementos definidos en orden de magnitud creciente, con la excepción de que el elemento de "día(s) de la semana" es el último elemento. Consulta la [documentación](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07) para más información y ejemplos.
+> La sintaxis de `cron` tiene sus elementos definidos en orden de magnitud creciente, con la excepción de que el elemento "día(s) de la semana" es el último. Consulta la [documentación](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07) para más información y ejemplos.
 
 - [ ] 
 ```yaml
