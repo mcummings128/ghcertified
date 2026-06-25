@@ -1,14 +1,14 @@
 ---
-question: "Musisz upewnić się, że środowisko `prod` wymaga ręcznej akceptacji przed kontynuowaniem wdrożeń. Które z poniższych opcji są prawidłowe w kontekście konfiguracji tego ustawienia?"
+question: "Musisz upewnić się, że środowisko `prod` wymaga ręcznego zatwierdzenia, zanim wdrożenia będą mogły być kontynuowane. Które z poniższych opcji są prawdziwe w kontekście konfiguracji tego ustawienia?"
 documentation: "https://docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments#required-reviewers"
 ---
 
-- [x] Jeśli wymienisz wymaganych recenzentów, tylko jeden z nich musi zatwierdzić, aby kontynuować wdrożenie.
-- [x] Możesz zapobiec samodzielnym recenzjom, w przypadku gdy osoba chcąca wdrożyć jest również wymaganą osobą recenzującą.
-- [ ] Jeśli wymienisz wymaganych recenzentów, wszyscy muszą zatwierdzić, aby kontynuować wdrożenie.
-> Co zaskakujące, tylko jeden z wymaganych recenzentów musi zatwierdzić zadanie workflow. Aby wymusić takie zachowanie, musisz utworzyć niestandardową regułę ochrony wdrożenia za pomocą GitHub App.
-- [ ] Nie można zapobiec samodzielnym recenzjom, ale można skonfigurować alerty informujące, kto uruchomił wdrożenie.
-- [ ] Jako wymaganych recenzentów można przypisać wyłącznie indywidualnych użytkowników, nie zespoły.
-> Zarówno indywidualni użytkownicy, jak i zespoły mogą być przypisani jako wymagani recenzenci.
-- [ ] Wymagani recenzenci potrzebują co najmniej dostępu na poziomie `write` do repozytorium, aby zatwierdzić.
-> Wymagani recenzenci potrzebują co najmniej dostępu na poziomie `read`.
+- [x] Jeśli wymienisz wymaganych recenzentów, tylko jeden z nich musi zatwierdzić, aby kontynuować wdrażanie.
+- [x] Możesz zapobiec autoryzacji własnych recenzji w przypadku, gdy osoba, która chce wdrożyć, jest również wymagana jako recenzent.
+- [ ] Jeśli wymienisz wymaganych recenzentów, wszyscy muszą zatwierdzić, aby kontynuować wdrażanie.
+> Zaskakująco tylko 1 z wymaganych recenzentów musi zatwierdzić zadanie w ramach przepływu pracy. Aby wymusić takie zachowanie, musisz utworzyć niestandardową regułę ochrony wdrożeń za pomocą aplikacji GitHub App.
+- [ ] Nie możesz zapobiec autoryzacji własnych recenzji, ale możesz skonfigurować alerty informujące, kto uruchomił wdrożenie.
+- [ ] Wymaganymi recenzentami mogą być jedynie pojedynczy użytkownicy, a nie zespoły.
+> Wymaganymi recenzentami mogą być zarówno pojedynczy użytkownicy, jak i zespoły.
+- [ ] Wymagani recenzenci muszą mieć co najmniej dostęp na poziomie `write` do repozytorium, aby zatwierdzić.
+> Wymagani recenzenci muszą mieć co najmniej dostęp na poziomie `read`.
