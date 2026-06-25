@@ -1,13 +1,13 @@
 ---
-question: "Judith ma przepływ pracy, który powinien być uruchamiany za każdym razem, gdy zostanie wykonany commit w repozytorium. Repozytorium nie zawsze jest aktywne, więc Judith chce, aby przepływ pracy był programowo uruchamiany raz w tygodniu jako zabezpieczenie. Jakiej kombinacji zdarzeń powinna użyć, aby to osiągnąć?"
+question: "Judith ma workflow, który powinien być uruchamiany za każdym razem, gdy w repozytorium zostanie wykonany commit. Repozytorium nie jest zawsze aktywne, więc Judith chce, aby workflow uruchamiał się programowo raz w tygodniu jako zabezpieczenie. Jakiej kombinacji zdarzeń powinna użyć, aby wymusić takie zachowanie?"
 documentation: "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows"
 ---
 
-- [x] `push` and `schedule`
-- [ ] `pull_request` (with `types:[closed]`) and `schedule`
-> Pull requests mogą być zamykane bez ich scalania, a commit można wykonać w repozytorium bez pull request.
-- [ ] `push` and `workflow_dispatch`
-> Słowo „programmatically” w pytaniu oznacza, że przepływ pracy powinien być uruchamiany w sposób automatyczny, a nie ręczny. Wymaganie od użytkowników, aby ręcznie uruchamiali przepływ pracy co tydzień, nie jest niezawodne — można i należy to zautomatyzować za pomocą `schedule`.
-- [ ] `push` and `weekly`
-> `weekly` nie jest prawidłowym zdarzeniem. Użyj `schedule` z składnią `cron`, aby ustawić przepływ pracy na cotygodniowe uruchamianie.
-- [ ] This is not possible: `schedule` cannot be combined with other events
+- [x] `push` i `schedule`
+- [ ] `pull_request` (z `types:[closed]`) i `schedule`
+> Pull requests mogą być zamykane bez ich scalania, a commity mogą być wykonywane w repozytorium bez pull requesta.
+- [ ] `push` i `workflow_dispatch`
+> W pytaniu użyto słowa „programowo”, co oznacza, że workflow powinien być uruchamiany w sposób automatyczny, a nie ręczny. Wymóg ręcznego uruchamiania workflow raz w tygodniu nie jest niezawodny — powinno to i może być zautomatyzowane za pomocą `schedule`.
+- [ ] `push` i `weekly`
+> `weekly` nie jest prawidłowym zdarzeniem. Użyj `schedule` z składnią `cron`, aby ustawić uruchamianie workflow raz w tygodniu.
+- [ ] To nie jest możliwe: `schedule` nie może być łączone z innymi zdarzeniami
