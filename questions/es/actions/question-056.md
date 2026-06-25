@@ -4,7 +4,7 @@ documentation: "https://docs.github.com/en/actions/reference/workflows-and-actio
 ---
 
 - [x] Usando reglas de protección de implementación
-- [ ] Estableciendo los revisores requeridos en el workflow de `production`
+- [ ] Configurando los revisores requeridos en el workflow de `production`
 - [ ] Usando reglas de protección de rama
 - [ ] Las aprobaciones manuales no son compatibles con GitHub Actions
 
