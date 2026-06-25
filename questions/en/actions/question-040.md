@@ -17,7 +17,7 @@ jobs:
 ```
 - [x] All secrets available to `workflow A` will be also available to `workflow B`, but not to `workflow C`
 - [ ] All secrets from `octo-org` organization and `octo-org/example-repo` repository will be available to `workflow B`, but not to `workflow C`
-> Not all secrets from `octo-org` organization have to be made available to `octo-org/example-repo`.
+> Not all secrets from `octo-org` organization have to be made available to `octo-org/example-repo`; organization secrets can be limited to select repositories as seen in the [documentation](https://docs.github.com/en/actions/concepts/security/secrets#organization-level-secrets). 
 - [ ] All secrets available to `workflow A` will be also available to `workflow B` and `workflow C`
 > `Workflow B` would need to add `secrets: inherit` when calling `workflow C`
 - [ ] Only repository and environment secrets available to `workflow A` will be available to `workflow B`, but not to `workflow C`. Organization scoped secrets cannot be inherited
