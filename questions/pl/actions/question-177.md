@@ -1,5 +1,5 @@
 ---
-question: "Twój workflow musi uruchamiać się o godzinie 12:00 AM w każdy poniedziałek i piątek. Który z poniższych fragmentów kodu odpowiada temu wymaganiu?"
+question: "Twój workflow musi być uruchamiany o 12:00 w nocy w każdy poniedziałek i piątek. Który z poniższych fragmentów kodu odpowiada temu zachowaniu?"
 documentation: "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule"
 ---
 
@@ -9,7 +9,7 @@ on:
   schedule:
     - cron: '0 0 * * 1,5'
 ```
-> Składnia `cron` określa elementy w porządku rosnącej wielkości, z wyjątkiem elementu "dzień tygodnia", który jest ostatnim elementem. Zobacz [dokumentację](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07) dla dodatkowych informacji i przykładów.
+> Składnia `cron` ma swoje elementy zdefiniowane w kolejności rosnącej wielkości, z wyjątkiem elementu "dni tygodnia", który jest ostatnim elementem. Zobacz [dokumentację](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07), aby uzyskać więcej informacji i przykładów.
 
 - [ ] 
 ```yaml
@@ -17,7 +17,7 @@ on:
   schedule:
     - cron: '0 12 * * Mon,Fri'
 ```
-> Element "dzień tygodnia" musi być w formacie numerycznym. Dodatkowo, elementy "minuta" i "godzina" wskazują na 12:00 PM, a nie 12:00 AM.
+> Element "dni tygodnia" musi być w formacie liczbowym. Dodatkowo elementy "minuty" i "godziny" wskazują na 12:00 w południe, a nie 12:00 w nocy.
 
 - [ ] 
 ```yaml
